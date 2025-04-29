@@ -1,13 +1,11 @@
 package com.example.lab_springbot.controllers;
 
-import com.example.lab_springbot.models.Employee;
 import com.example.lab_springbot.models.Patient;
 import com.example.lab_springbot.repositories.PatientRepository;
-
+import com.example.lab_springbot.services.PatientService;
 import org.springframework.web.bind.annotation.*;
 
 import java.time.LocalDate;
-
 import java.util.List;
 
 
@@ -16,9 +14,11 @@ import java.util.List;
 public class PatientController {
 
     private final PatientRepository repository;
+    private final PatientService patientService;
 
-    public PatientController(PatientRepository repository) {
+    public PatientController(PatientRepository repository, PatientService patientService) {
         this.repository = repository;
+        this.patientService = patientService;
     }
 
     @GetMapping
@@ -28,7 +28,7 @@ public class PatientController {
 
     @GetMapping("/{id}")
     public Patient getById(@PathVariable Long id) {
-        return repository.findById(id).orElse(null);
+        return repository.findById(Math.toIntExact(id)).orElse(null);
     }
 
     @GetMapping("/dob")
@@ -44,9 +44,10 @@ public class PatientController {
         return repository.findByAdmittedByDepartment(department);
     }
 
-    @GetMapping("/doctor-status/{status}")
-    public List<Patient> getByDoctorStatus(@PathVariable Employee.Status status) {
-        return repository.findByAdmittedByStatus(status);
+    @GetMapping("/employees-status/{status}")
+    public List<Patient> getPatientsByEmployeeStatus(@PathVariable String status) {
+        return patientService.getPatientsByEmployeeStatus(status);
     }
 }
+
 

@@ -27,7 +27,7 @@ public class EmployeeController {
 
     @GetMapping("/{id}")
     public ResponseEntity<Employee> getById(@PathVariable Long id) {
-        return repository.findById(id).map(ResponseEntity::ok)
+        return repository.findById(Math.toIntExact(id)).map(ResponseEntity::ok)
                 .orElse(ResponseEntity.notFound().build());
     }
 

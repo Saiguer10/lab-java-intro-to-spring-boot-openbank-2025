@@ -59,15 +59,24 @@ Patient Table
 ## Instructions
 
 1. **Get all doctors:** Create a route to get all doctors. 
+![todos los doctores.JPG](todos%20los%20doctores.JPG)
 2. **Get doctor by ID:** Create a route to get a doctor by `employee_id`.
+![empleadoID.JPG](empleadoID.JPG)
 3. **Get doctors by status:** Create a route to get doctors by `status`.
+![Empleado_por_status.JPG](Empleado_por_status.JPG)
 4. **Get doctors by department:** Create a route to get doctors by `department`.
+![Empleado_por_departament.JPG](Empleado_por_departament.JPG)
 5. **Get all patients:** Create a route to get all patients.
+![Todos_los_pacientes.JPG](Todos_los_pacientes.JPG), ![Todos_los_pacientes_1.JPG](Todos_los_pacientes_1.JPG)
 6. **Get patient by ID:** Create a route to get a patient by `patient_id`.
+![PacienteID.JPG](PacienteID.JPG)
 7. **Get patients by date of birth range:** Create a route to get patients date of birth within a specified range.
-8. **Get patients by admitting doctor's department:** Create a route to get patients by the department that their admitting doctor is in (For example, get all patients admitted by a doctor in cardiology).
+![Pacientes_por_rango_fecha.JPG](Pacientes_por_rango_fecha.JPG)
+8. **Get patients by admitting doctor's department:** Create a route to get patients by the department 
+that their admitting doctor is in (For example, get all patients admitted by a doctor in cardiology).
+![Pacientes_por_dpto_medico.JPG](Pacientes_por_dpto_medico.JPG)
 9. **Get all patients with a doctor whose status is OFF:** Create a route to get all patients with a doctor whose `status` is OFF.
-
+![Pacientes_medico_OFF.JPG](Pacientes_medico_OFF.JPG)
 <br>
 
 ## Additional Testing Reminder
